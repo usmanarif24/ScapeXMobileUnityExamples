@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tuioSession: {fileID: 1068883622}
-  _tokenPrefab: {fileID: 8159175845109018078, guid: 23252af3a26060a48bedf1716fd3b6df, type: 3}
+  _tokenPrefab: {fileID: 8006207992659704637, guid: 608321fa4026c974ebf3f24449cc1305, type: 3}
   _pointerPrefab: {fileID: 7180560162413034633, guid: ec90a1736c95aa747b799c4ea1b0345f, type: 3}
   _scapeXMobilePrefab: {fileID: 1754159945131096591, guid: 4236aba04630821478bccdd7bee20e59, type: 3}
 --- !u!1001 &1068883621
