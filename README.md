@@ -4,7 +4,7 @@ In this repository we collect some basic examples how to use our Scape X Mobile 
 
 ## Setup
 
-The first thing you need to do is to install our [TUIO-Client](https://github.com/InteractiveScapeGmbH/TuioUnityClient) package in order to get touch and object recognition working. 
+The first thing you need to do is to install our [TUIO-Client](https://github.com/InteractiveScapeGmbH/TuioUnityClient) package in order to get touch and object recognition working.
 
 ## Example Scenes
 
@@ -28,7 +28,10 @@ With this scene it is possible to distinguish different devices on the screen by
 
 ![](documentation/one-way-viewport.png)
 
-For this setup you need a running web app and connect each device you want to track with it. In this example this is done by providing a QR code which leads to our test web app (see [github](https://github.com/InteractiveScapeGmbH/InteractiveScapeGmbH.github.io/)). You can set your own url in the `QR Image` component on the QR Prefab.
+For this setup you need two additional components:
+- A running `ScapeXMobileMqttDeviceBridge` running in the background.
+- A running web app which each device you want to track needs to connect to. In this example this is done by providing a QR code which leads to our test web app (see [github](https://github.com/InteractiveScapeGmbH/InteractiveScapeGmbH.github.io/)). You can set your own url in the `QR Image` component on the QR Prefab.
+
 
 Once your device has connected to the web app (see documentation) it gets a unique ID which you can see when you place it on the screen.
 
