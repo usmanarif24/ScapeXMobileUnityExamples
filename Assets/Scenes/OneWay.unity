@@ -592,7 +592,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1244637601394062377, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
   m_PrefabInstance: {fileID: 2449934438327188431}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1871275718
+--- !u!21 &1511630330
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -680,11 +680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1244637601394062377, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 1244637601394062377, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 250
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 1244637601394062377, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -737,6 +737,10 @@ PrefabInstance:
     - target: {fileID: 2126138514418935813, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
       propertyPath: m_Name
       value: QR
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849733126432476067, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
+      propertyPath: _url
+      value: https://interactivescapegmbh.github.io
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
