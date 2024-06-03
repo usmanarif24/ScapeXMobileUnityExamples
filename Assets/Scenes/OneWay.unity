@@ -123,56 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &318133227
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SDF/SceneSDF
-  m_Shader: {fileID: 4800000, guid: 2605b53ba8367664888f153bf3ffccfb, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Debug: 0
-    - _Fill: 1
-    - _IsMask: 0
-    - _LineDistance: 1
-    - _LineThickness: 1
-    - _Radius: 0.25
-    - _Shape: 1
-    - _Smooth: 0.01
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _SubLineThickness: 1
-    - _SubLines: 1
-    m_Colors:
-    - _InsideColor: {r: 1, g: 0, b: 0, a: 1}
-    - _OutsideColor: {r: 0, g: 1, b: 0, a: 1}
-    - _Size: {r: 1, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +457,11 @@ MonoBehaviour:
   _tokenPrefab: {fileID: 8006207992659704637, guid: 608321fa4026c974ebf3f24449cc1305, type: 3}
   _pointerPrefab: {fileID: 7180560162413034633, guid: ec90a1736c95aa747b799c4ea1b0345f, type: 3}
   _scapeXMobilePrefab: {fileID: 1754159945131096591, guid: 4236aba04630821478bccdd7bee20e59, type: 3}
+--- !u!1 &937955802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2126138514418935813, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
+  m_PrefabInstance: {fileID: 2449934438327188431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1068883621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -574,17 +529,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6282188938933972883, guid: dbaa5cd0f9d2e2140a42639f7b84806c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1068883624}
   m_SourcePrefab: {fileID: 100100000, guid: dbaa5cd0f9d2e2140a42639f7b84806c, type: 3}
 --- !u!114 &1068883622 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6282188938933972878, guid: dbaa5cd0f9d2e2140a42639f7b84806c, type: 3}
   m_PrefabInstance: {fileID: 1068883621}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1068883623}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 580a64d77d3d49c9baa2e5afef6a8238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1068883623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6282188938933972883, guid: dbaa5cd0f9d2e2140a42639f7b84806c, type: 3}
+  m_PrefabInstance: {fileID: 1068883621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1068883624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068883623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fc51f25a5b4d2298affd41cc8cadae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &1125667823 stripped
@@ -592,7 +567,20 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1244637601394062377, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
   m_PrefabInstance: {fileID: 2449934438327188431}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1511630330
+--- !u!114 &1125667829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937955802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50170c4c9d64eb844b2a214894f0e8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scapeXMobile: {fileID: 1068883624}
+--- !u!21 &1696714261
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -653,7 +641,7 @@ PrefabInstance:
     - target: {fileID: 398451686528493463, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 318133227}
+      objectReference: {fileID: 1696714261}
     - target: {fileID: 1244637601394062377, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -740,12 +728,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8849733126432476067, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
       propertyPath: _url
-      value: https://interactivescapegmbh.github.io
+      value: https://interactivescapegmbh.github.io/sxmtest.html
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2126138514418935813, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1125667829}
   m_SourcePrefab: {fileID: 100100000, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
