@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace SxmExamples.QR
@@ -8,7 +7,15 @@ namespace SxmExamples.QR
     public class QrImage : MonoBehaviour
     {
         [SerializeField] private string _url;
-
+        public string Url
+        {
+            get => _url;
+            set
+            {
+                _url = value;
+                UpdateTexture();
+            }
+        }
         private RawImage _image;
         private QrCodeGenerator _generator;
 
@@ -20,21 +27,17 @@ namespace SxmExamples.QR
 
         private void Start()
         {
-            UpdateTexture(_url);
+            UpdateTexture();
         }
 
-        private void UpdateTexture(string url)
+        private void UpdateTexture()
         {
-            if (string.IsNullOrEmpty(url)) return;
-            var data = _generator.CreateQrCode(url, QrCodeGenerator.ECCLevel.Q);
+            if (string.IsNullOrEmpty(_url)) return;
+            var data = _generator.CreateQrCode(_url, QrCodeGenerator.ECCLevel.Q);
             var qrCode = new QrCode(data);
             _image.material.mainTexture = qrCode.GetGraphic(20);
-        }
-
-        public void SetUrl(string url)
-        {
-            _url = url;
-            UpdateTexture(_url);
+            _image.enabled = false;
+            _image.enabled = true;
         }
     }
 }
