@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UnityToolkit.UI.QR
+namespace SxmExamples.QR
 {
     [RequireComponent(typeof(RawImage))]
     public class QrImage : MonoBehaviour

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityToolkit.UI.QR
+namespace SxmExamples.QR
 {
     public class QrCode : IDisposable
     {

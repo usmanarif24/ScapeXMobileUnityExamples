@@ -1,11 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityToolkit.UI.QR.Utils;
-using System;
 using System.IO;
 using System.IO.Compression;
+using SxmExamples.QR.Utils;
 
-namespace UnityToolkit.UI.QR
+namespace SxmExamples.QR
 {
     public class QrCodeData : IDisposable
     {

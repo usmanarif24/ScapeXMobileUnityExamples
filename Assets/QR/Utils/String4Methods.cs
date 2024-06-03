@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnityToolkit.UI.QR.Utils
+namespace SxmExamples.QR.Utils
 {
     internal static class String4Methods
     {

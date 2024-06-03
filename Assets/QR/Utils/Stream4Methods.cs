@@ -1,4 +1,4 @@
-﻿namespace UnityToolkit.UI.QR.Utils
+﻿namespace SxmExamples.QR.Utils
 {
     public static class Stream4Methods
     {

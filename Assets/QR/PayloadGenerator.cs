@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using UnityToolkit.UI.QR.Utils;
+using SxmExamples.QR.Utils;
 
-namespace UnityToolkit.UI.QR
+namespace SxmExamples.QR
 {
     public static class PayloadGenerator
     {

@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Collections;
-using UnityToolkit.UI.QR.Exceptions;
+using SxmExamples.QR.Exceptions;
 
-namespace UnityToolkit.UI.QR
+namespace SxmExamples.QR
 {
     public class QrCodeGenerator : IDisposable
     {

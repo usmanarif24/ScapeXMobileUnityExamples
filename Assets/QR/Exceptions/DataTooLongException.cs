@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnityToolkit.UI.QR.Exceptions
+namespace SxmExamples.QR.Exceptions
 {
     public class DataTooLongException : Exception
     {
