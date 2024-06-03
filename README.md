@@ -39,7 +39,7 @@ With this scene it is possible to distinguish different devices on the screen by
 
 ![](documentation/overview.png)
 
-The `Scape X Engine` is the software running inside our touch tables. Each table has a unique ID (`SXM UUID`) which by default is the hardware id of the table. You can change this ID in the `Touch & Object Assistant`.
+The `Scape X Engine` is the software running inside our touch tables. Each table has a unique ID (`SXM UUID`) which by default is the hardware id of the table. You can change this ID in the `Touch & Object Assistant`:
 1. Open `10.0.0.20` in your browser
 2. At the bottom click `Show Expert-Options`
 3. Scroll down to Scape X Mobile
@@ -47,7 +47,9 @@ The `Scape X Engine` is the software running inside our touch tables. Each table
 
 ![](documentation/toa-config.png)
 
-The `Scape X Engine` is responsible for detecting touches, object and smartphones on the touchscreen and sends tuio messages over ethernet to the `Application PC`. The `SDK` mentioned in the overview image is in the case of a unity application the [TuioUnityClient](https://github.com/InteractiveScapeGmbH/TuioUnityClient). 
+The `Scape X Engine` is responsible for detecting touches, object and smartphones on the touchscreen and sends tuio messages over ethernet to the `Application PC`. For `Scape X Mobile` we use two different Tuio profiles. The `Bounds` message encodes information about the transformation of the device (e.g. position, rotation, width, height...). The `Symbol` message contains the id of the detected device in its `data` field. By default, every phone which gets detected on the table and is not connected to the webapp gets an id of `-1`. As soon as the phone is connected to the webapp and placed on the table it gets its unique id.
+
+The `SDK` mentioned in the overview image is in the case of a unity application the [TuioUnityClient](https://github.com/InteractiveScapeGmbH/TuioUnityClient). 
 
 Every second the `Scape X Engine` also sends a special message which contains the unique ID of the table and the custom MQTT server url (if it was set). The `TuioUnityClient` has a `ScapeXMobile` component for this purpose which registers a `MessageListener` for this special message and raises en event everytime one changes the configuration in the `Touch & Object Assistant`
 
@@ -82,7 +84,7 @@ public class ScapeXMobile : MonoBehaviour
 }
 ```
 
-The `Unique ID` sample scene has a `QrUpdater` component which registers on the `OnConfigUpdate` event of the `ScapeXMobile` and updates the QR-Code.
+The `Unique ID` sample scene has a `QrUpdater` component which registers on the `OnConfigUpdate` event of the `ScapeXMobile` component and updates the QR-Code.
 
 This QR contains the URL to the `Web-App`with parameters for the `Room Id` and an optional parameter for the custom `MQTT Server Url` (if set). 
 
@@ -95,7 +97,7 @@ Vertical Moving Phone | Horizontal Stationary Phone
 :-------:|:------:
 <img src="documentation/vertical_moving.png" height="500">|<img src="documentation/horizontal_static.png" height="500">
 
-- If the smartphone is stationary and horizontal the webapp sends a message with the unique Id of the smartphone to the MQTT Server.
+- If the smartphone is stationary and horizontal (which could mean it was placed on the table) the webapp sends a message with the unique Id of the smartphone to the MQTT Server.
 
 The `Scape X Bridge` is a small software which needs to run in the background if you want to use `Scape X Mobile` with a webapp. This is because the `Scape X Engine` has no connection to the internet. The `Scape X Bridge` has a connection to the `Scape X Engine` via websocket and can read the `Room Id` and the `MQTT Server Url` of the table. With this information it connects to the MQTT Server and also subscribes to the topic with the `Room Id`. So the `Scape X Bridge` gets notified if a smartphone was put on the table.
 
