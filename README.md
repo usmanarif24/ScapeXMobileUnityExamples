@@ -91,8 +91,8 @@ With this example here we provide a test webapp which does the following:
 - It generates a unique id for your smartphone. 
 - It uses the gyroscope to detect if the phone is horizontal or vertical and if the phone is in motion or not. (which you can see in the top right corner on the website)
 
-![](documentation/vertical_moving.png)
-![](documentation/horizontal_static.png)
+<img src="documentation/vertical_moving.png" height="500">
+<img src="documentation/horizontal_static.png" height="500">
 
 - If the smartphone is stationary and horizontal the webapp sends a message with the unique Id of the smartphone to the MQTT Server.
 
