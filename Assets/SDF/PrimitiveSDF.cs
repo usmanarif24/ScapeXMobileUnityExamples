@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UnityToolkit.SDF
+namespace SxmExamples.SDF
 {
     public enum Shape
     {
