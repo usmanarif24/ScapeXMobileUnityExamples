@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f30a82caae7047a6c7b39d9ccec3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tuioSession: {fileID: 1068883622}
+  _tuioSessionBehaviour: {fileID: 1068883622}
   _tokenPrefab: {fileID: 8006207992659704637, guid: 608321fa4026c974ebf3f24449cc1305, type: 3}
   _pointerPrefab: {fileID: 7180560162413034633, guid: ec90a1736c95aa747b799c4ea1b0345f, type: 3}
   _scapeXMobilePrefab: {fileID: 1754159945131096591, guid: 4236aba04630821478bccdd7bee20e59, type: 3}
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068883623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4fc51f25a5b4d2298affd41cc8cadae, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bcdf5520faa477d90034dea6e9bfd6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &1125667823 stripped
@@ -580,6 +580,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scapeXMobile: {fileID: 1068883624}
+--- !u!114 &1125667830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7455918638059896800, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
+  m_PrefabInstance: {fileID: 2449934438327188431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937955802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ac4f25f7c549c4d95ddee36d8f433c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!21 &1696714261
 Material:
   serializedVersion: 8
@@ -726,6 +737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QR
       objectReference: {fileID: 0}
+    - target: {fileID: 8849733126432476067, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
+      propertyPath: _sdf
+      value: 
+      objectReference: {fileID: 1125667830}
     - target: {fileID: 8849733126432476067, guid: bfbf5955552f31c41a9e22daf0a80a15, type: 3}
       propertyPath: _url
       value: https://interactivescapegmbh.github.io/sxmtest.html
