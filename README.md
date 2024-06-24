@@ -51,7 +51,7 @@ The `Unique ID` sample scene has a `QrUpdater` component which registers on the 
 This QR-Code contains the URL to the `Web-App`with parameters for the `Room Id` and an optional parameter for the custom `MQTT Server Url` (if set). 
 
 ### Web-App
-With this example here we provide a test webapp which does the following:
+With this example here we provide a test [webapp](https://interactivescapegmbh.github.io/) which does the following:
 - The webapp uses the provided `Room Id` and `MQTT Server Url` to connect to the MQTT Server and subscribes to a topic which is the given `Room Id`. 
 - It generates a unique id for your smartphone. 
 - It uses the gyroscope to detect if the phone is horizontal or vertical and if the phone is in motion or not. (which you can see in the top right corner on the website)
