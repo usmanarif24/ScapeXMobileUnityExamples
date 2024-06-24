@@ -12,6 +12,8 @@ namespace SxmExamples
         private QrImage _qrImage;
         private string _baseUrl = string.Empty;
 
+        private string _webAppUrl;
+
         private void Awake()
         {
             _qrImage = GetComponent<QrImage>();
@@ -19,23 +21,28 @@ namespace SxmExamples
 
         private void OnEnable()
         {
-            _scapeXMobile.OnConfigUpdate += UpdateCode;
+            _scapeXMobile.OnConfigUpdate += UpdateQrCode;
         }
 
         private void OnDisable()
         {
-            _scapeXMobile.OnConfigUpdate -= UpdateCode;
+            _scapeXMobile.OnConfigUpdate -= UpdateQrCode;
         }
 
-        private void UpdateCode(SxmConfig config)
+        private void Update()
+        {
+            if (string.IsNullOrEmpty(_webAppUrl) || _qrImage.Url == _webAppUrl) return;
+            _qrImage.Url = _webAppUrl;
+        }
+        
+        private void UpdateQrCode(object sender, SxmEventArgs sxmConfig)
         {
             if (_baseUrl == string.Empty)
             {
                 _baseUrl = _qrImage.Url;
             }
-
-            _qrImage.Url = $"{_baseUrl}?r={config.RoomId}";
-            _qrImage.Url += string.IsNullOrEmpty(config.MqttUrl) ? string.Empty : $"&u={config.MqttUrl}";
+            _webAppUrl = $"{_baseUrl}?r={sxmConfig.RoomId}";
+            _webAppUrl += string.IsNullOrEmpty(sxmConfig.MqttUrl) ? string.Empty : $"&u={sxmConfig.MqttUrl}";
         }
     }
 }

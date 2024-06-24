@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SxmExamples.SDF;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace SxmExamples.QR
@@ -23,11 +24,6 @@ namespace SxmExamples.QR
         {
             _image = GetComponent<RawImage>();
             _generator = new QrCodeGenerator();
-        }
-
-        private void Start()
-        {
-            UpdateTexture();
         }
 
         private void UpdateTexture()
